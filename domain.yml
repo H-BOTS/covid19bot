@@ -1,0 +1,188 @@
+slots:
+  corona:
+    type: list
+  decision_type:
+    type: list
+  city:
+    type: list
+  result_type:
+    type: list
+
+intents:
+  - greet
+  - corona_assess
+  - decision
+  - city_choice
+  - affirm
+  - deny
+
+  # - intial_bot
+  # - choose_city
+  # - covid_check
+  # - covid_result
+  # - covid_positive
+  # - covid_recover
+  # - choose_country
+  # - covid_symptoms
+  # - covid_contacttrace
+  # - covid_breathe
+  # - goodbye
+  # - affirm
+  # - deny
+  # - mood_great
+  # - mood_unhappy
+  # - bot_challenge
+
+entities:
+  - corona
+  - decision_type
+  - city
+  - result_type
+
+responses:
+  utter_greet:
+  - text: "Hey! How are you?"
+
+  # utter_cheer_up:
+  # - text: "Here is something to cheer you up:"
+  #   image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  # utter_did_that_help:
+  # - text: "Did that help you?"
+
+  # utter_happy:
+  # - text: "Great, carry on!"
+
+  # utter_goodbye:
+  # - text: "Bye"
+
+  # utter_iamabot:
+  # - text: "I am a bot, powered by Rasa."
+
+  utter_intial_bot:
+    - text: "I'm Kish. I'm here to help you with coronavirus assessment Tool. \n
+             I'm not a substitute for professional Doctor, Medical Advisor. In Case of emergency always consultant a medical professional for serious symptoms. \n
+             When you agree to our Terms of Use and Privacy policy, We can continue."
+      buttons:
+        - title: "Agree"
+        - title: "Decline"
+  
+  utter_choose_city:
+    - text: "To help you with best care for COVID-19 \n
+             We're here with COVID-19 Assessment with set of Questions!!"
+      buttons:
+        - title: "Hyderabad"
+        - title: "Delhi"
+        - title: "Bangalore"
+        - title: "Bihar"
+        - title: "Mumbai"
+  
+  utter_covid_check:
+    - text: "Have you been tested for COVID-19?"
+      buttons:
+        - title: "Yes"
+          payload: '/Yes'
+        - title: "No"
+          payload: '/No'
+
+  utter_covid_result:
+    - text: "Do you know results?"
+      buttons:
+        - title: "Yes"
+          payload: '/Yes'
+        - title: "No"
+          payload: '/No'
+      
+  utter_covid_positive:
+    - text: "Have you been tested positive for COVID-19?"
+      buttons:
+        - title: "Yes"
+          payload: '/Yes'
+        - title: "No"
+          payload: '/No'
+
+  utter_covid_recover:
+    - text: "Did you recovered?"
+      buttons:
+        - title: "Yes"
+          payload: '/Yes'
+        - title: "No"
+          payload: '/No'
+
+  utter_choose_country:
+    - text: "Have you recently travelled to below given set of countries? \n
+             China \n
+             France \n
+             Germany\n
+             America \n
+             South Korea \n
+             Italy \n
+             Spain \n"
+      buttons:
+        - title: "Yes"
+          payload: '/Yes'
+        - title: "No"
+          payload: '/No'
+
+  utter_covid_symptoms:
+    - text: "Do you have following symptoms? \n
+             Fever \n
+             Dry Cough \n
+             Runny Nose \n
+             Sore Throat"
+      buttons:
+        - title: "Yes"
+          payload: '/Yes'
+        - title: "No"
+          payload: '/No'
+  
+  utter_covid_contacttrace:
+    - text: "Do you come in contact with anyone who travelled to these countries and are now feeling sick?"
+      buttons:
+        - title: "Yes"
+          payload: '/Yes'
+        - title: "No"
+          payload: '/No'
+      
+  utter_covid_breathe:
+    - text: "Are you experiencing difficulty in breathing?"
+      buttons:
+        - title: "Yes"
+          payload: '/Yes'
+        - title: "No"
+          payload: '/No'
+  
+  utter_experience:
+    - text: "Please Share your experience with us to help others serve better"
+
+  utter_assist:
+    - text: "Please do one of the following: \n
+             Please Call emergency Helpline for assistance\n
+             Click here to find emergency contact number"
+  
+  utter_stayathome:
+    - text: "Good to hear about you, Let us help government by staying at home."
+
+  utter_aint_travelled:
+    - text: "It shows you haven't travelled anywhewre, Thanks stay at home."
+
+  actions:
+  - utter_ greet
+  - utter_intial_bot
+  - utter_choose_city
+  - utter_covid_check
+  - utter_covid_result
+  - utter_covid_positive
+  - utter_covid_recover
+  - utter_choose_country
+  - utter_covid_symptoms
+  - utter_covid_contacttrace
+  - utter_covid_breathe
+  - utter_experience
+  - utter_assist
+  - utter_stayathome
+  - utter_aint_travelled     
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
