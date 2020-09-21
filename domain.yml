@@ -53,8 +53,8 @@ responses:
   # utter_happy:
   # - text: "Great, carry on!"
 
-  # utter_goodbye:
-  # - text: "Bye"
+  utter_goodbye:
+   - text: "Thanks for choosing us, Have a good day! Bye..."
 
   # utter_iamabot:
   # - text: "I am a bot, powered by Rasa."
@@ -181,7 +181,8 @@ responses:
   - utter_experience
   - utter_assist
   - utter_stayathome
-  - utter_aint_travelled     
+  - utter_aint_travelled
+  - utter_goodbye     
 
 session_config:
   session_expiration_time: 60

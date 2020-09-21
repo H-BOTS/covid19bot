@@ -96,6 +96,12 @@
 * deny{"result_type":"No"}
   - utter_aint_travelled
 
+## path1 all yes
+* corona_assess{"corona":"coronavirus"}
+  - utter_intial_bot
+* decision{"decision_type":"Decline"}
+  - utter_goodbye
+  
 <!-- * mood_great
   - utter_happy
 
